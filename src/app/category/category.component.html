@@ -1,0 +1,12 @@
+<ul>
+  <ng-container *ngFor="let item of category ; let index=index">
+    <li [ngClass]="{'active':item==selectedCategory}">
+      <a (click)="selectCategory(item)">{{item}}</a>
+    </li>
+  </ng-container>
+  <form class="form-inline my-2 my-lg-0">
+    <input [formControl]="searchText" class="form-control mr-sm-2" type="search" placeholder="Search"
+      aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-3" type="button" (click)="onSearch()">Search</button>
+  </form>
+</ul>

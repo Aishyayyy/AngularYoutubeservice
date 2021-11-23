@@ -1,0 +1,13 @@
+<div class="videoScreen">
+  <div class="row">
+    <div class="col-xs-6"></div>
+    <div *ngFor="let item of filteredVideos" class="card" style="width: 19rem  ;">
+      <div class="iframeContent">
+        <iframe [src]="getEmbedUrl(item)" style=" height: 100% ;left:0;"></iframe>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{item.title}}</h5>
+        <a href="#" class="btn btn-primary">{{item.category}}</a>
+      </div>
+    </div>
+  </div>
